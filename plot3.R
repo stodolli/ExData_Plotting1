@@ -16,7 +16,7 @@ subdata <- rawdata[rawdata$Date >= as.Date("2007-02-01") &
 png(filename = "plot3.png", width = 480, height = 480, bg = "transparent")
 plot(subdata$Time, subdata$Sub_metering_1, type = "n", xlab = "", 
      ylab = "Energy sub metering")
-lines(subdata$Time, subdata$Sub_metering_2, col = "black")
+lines(subdata$Time, subdata$Sub_metering_1, col = "black")
 lines(subdata$Time, subdata$Sub_metering_2, col = "red")
 lines(subdata$Time, subdata$Sub_metering_3, col = "blue")
 legend("topright", lty = c(1,1), col = c("black", "blue", "red"), 
